@@ -72,6 +72,7 @@ module.exports = io => {
       client.query(query, [userID, text], function (err, result) {
         if (err) {return}
         // console.log('created tweet');
+      res.redirect('/');
       })
     }
     var userIDquery = 'SELECT id FROM users WHERE $1 = name';
